@@ -1,9 +1,4 @@
 #!/bin/bash
-sudo mkdir monitoring
-cd ~/monitoring
-git clone https://github.com/sathish-gopi/log_monitoring.git
-sudo chmod 777 ~/monitoring/log_monitoring/Log_Monitoring_Configuration.sh
-sudo ~/monitoring/log_monitoring/Log_Monitoring_Configuration.sh
 sudo mkdir /var/log/clipfilp
 sudo touch /var/log/clipfilp/vps.log
 sudo chmod 777 vps.log
