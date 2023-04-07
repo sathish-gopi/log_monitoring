@@ -2,7 +2,6 @@
 sudo mkdir /var/log/clipfilp
 sudo touch /var/log/clipfilp/vps.log
 sudo chmod 777 vps.log
-cd
 wget https://s3.amazonaws.com/amazoncloudwatch-agent/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb
 sudo dpkg -i amazon-cloudwatch-agent.deb
 sudo mv ~/monitoring/log_monitoring/config.json /opt/aws/amazon-cloudwatch-agent/bin/
