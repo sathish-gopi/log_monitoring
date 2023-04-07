@@ -1,0 +1,67 @@
+{
+    "agent": {
+            "metrics_collection_interval": 1,
+            "run_as_user": "ubuntu"
+    },
+    "logs": {
+            "logs_collected": {
+                    "files": {
+                            "collect_list": [
+                                    {
+                                            "file_path": "/var/log/clipfilp/vps.log",
+                                            "log_group_name": "vt1-server-log-group",
+                                            "log_stream_name": "{instance_id}-d0-c1",
+                                            "retention_in_days": 1
+                                    }
+                            ]
+                    }
+            }
+    },
+    "metrics": {
+            "metrics_collected": {
+                    "cpu": {
+                            "measurement": [
+                                    "cpu_usage_idle",
+                                    "cpu_usage_iowait",
+                                    "cpu_usage_user",
+                                    "cpu_usage_system"
+                            ],
+                            "metrics_collection_interval": 1,
+                            "resources": [
+                                    "*"
+                            ],
+                            "totalcpu": false
+                    },
+                    "disk": {
+                            "measurement": [
+                                    "used_percent",
+                                    "inodes_free"
+                            ],
+                            "metrics_collection_interval": 1,
+                            "resources": [
+                                    "*"
+                            ]
+                    },
+                    "diskio": {
+                            "measurement": [
+                                    "io_time",
+                                    "write_bytes",
+                                    "read_bytes",
+                                    "writes",
+                                    "reads"
+                            ],
+                            "metrics_collection_interval": 1,
+                            "resources": [
+                                    "*"
+                            ]
+                    },
+                    "mem": {
+                        "measurement": [
+                            "mem_used_percent"
+                    ],
+                    "metrics_collection_interval": 1
+            }
+
+    }
+}
+}
