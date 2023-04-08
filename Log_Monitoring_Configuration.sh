@@ -7,7 +7,7 @@ wget https://s3.amazonaws.com/amazoncloudwatch-agent/ubuntu/amd64/latest/amazon-
 sudo dpkg -i amazon-cloudwatch-agent.deb
 sudo apt-get update -y
 sudo apt-get install collectd -y
-sudo mv ~/monitoring/log_monitoring/config.json /opt/aws/amazon-cloudwatch-agent/bin/
+sudo mv /monitoring/log_monitoring/config.json /opt/aws/amazon-cloudwatch-agent/bin/
 sudo chmod 777 /opt/aws/amazon-cloudwatch-agent/bin/config.json
 sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json -s
 sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a status
