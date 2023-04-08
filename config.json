@@ -8,7 +8,7 @@
                         "files": {
                                 "collect_list": [
                                         {
-                                                "file_path": "/var/log/clipfilp1/vps.log",
+                                                "file_path": "/var/log/clipfilp/vps.log",
                                                 "log_group_name": "vt1-server-log-group",
                                                 "log_stream_name": "{instance_id}-d0-c1",
                                                 "retention_in_days": 1
