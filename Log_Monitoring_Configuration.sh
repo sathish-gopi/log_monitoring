@@ -1,18 +1,18 @@
 #!/bin/bash
 
-sudo mkdir -p /home/ubuntu/monitoring
-cd /home/ubuntu/monitoring
-git clone https://github.com/sathish-gopi/log_monitoring.git
-sudo chmod 777 /home/ubuntu/monitoring/log_monitoring/Log_Monitoring_Configuration.sh
-sudo /home/ubuntu/monitoring/log_monitoring/Log_Monitoring_Configuration.sh
+#sudo mkdir -p /home/ubuntu/monitoring
+#cd /home/ubuntu/monitoring
+#git clone https://github.com/sathish-gopi/log_monitoring.git
+#sudo chmod 777 /home/ubuntu/monitoring/log_monitoring/log_monitoring_configuration.sh
+#sudo /home/ubuntu/monitoring/log_monitoring/log_monitoring_configuration.sh
 
 log_monitor_path="/var/log/clipfilp/"
-log_monitor_file="vps.dev.log"
+log_monitor_file="vps-dev.log"
 
 log_monitor_conf_temp="config.json"
 
 
-function  log_monitor{
+function log_monitor{
 
     wget https://s3.amazonaws.com/amazoncloudwatch-agent/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb
     sudo dpkg -i amazon-cloudwatch-agent.deb
@@ -41,6 +41,8 @@ else
     sudo chmod 777 /var/log/clipflip/$log_monitor_file
     log_monitor()
 fi
+
+
 
 
 
